@@ -3,7 +3,7 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 // import HelloWorld from './components/HelloWorld.vue'
 
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 
 const count = ref(0)
 
@@ -14,8 +14,10 @@ const appInfo = reactive({
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <div>
+    <h1>{{ appInfo.name }}</h1>
+    <h2>{{ appInfo.slogan }}</h2>
+  </div>
 </template>
 
 <style>
