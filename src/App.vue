@@ -5,9 +5,14 @@
 
 import { reactive, ref } from 'vue'
 
+interface AppInfo {
+  name: string
+  slogan: string
+}
+
 const count = ref(0)
 
-const appInfo = reactive({
+const appInfo: AppInfo = reactive({
   name: 'Counter',
   slogan: 'an app you can count on'
 })
