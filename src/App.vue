@@ -6,6 +6,11 @@
 import { ref } from 'vue'
 
 const count = ref(0)
+
+const appInfo = reactive({
+  name: 'Counter',
+  slogan: 'an app you can count on'
+})
 </script>
 
 <template>
