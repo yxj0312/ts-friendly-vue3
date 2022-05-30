@@ -37,5 +37,5 @@ function addCount(num: number) {
     <h2>{{ appInfo.slogan }}</h2>
   </div>
 	<p>{{ count }}</p>
-  <p><button @click="addCount">Add</button></p>
+  <p><button @click="addCount(1)">Add</button></p>
 </template>
