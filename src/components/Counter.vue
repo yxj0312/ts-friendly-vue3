@@ -29,7 +29,12 @@ onMounted(() => {
 
 function addCount(num: number) {
   if (count.value !== null) {
-    count.value += num;
+    if (count.value >= props.limit) {
+      alert(props.alertMessageOnLimit)
+    }
+    else {
+      count.value += num
+    }
   }
 }
 </script>
