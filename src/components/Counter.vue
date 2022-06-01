@@ -1,6 +1,23 @@
 <script setup lang="ts">
-import { ref,  onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import fetchCount from "../services/fetchCount";
+
+interface Props {
+  limit: number
+  alertMessageOnLimit: string
+}
+
+const props = defineProps<Props>()
+
+// const props = defineProps<{
+//     limit: number;
+//     alterMessageOnLimit: string;
+// }>()
+
+// const props = defineProps({
+//   limit: { type: Number, required: true },
+//   alertMessageOnLimit: { type: String, required: true }
+// })
 
 const count = ref<number | null>(null);
 
