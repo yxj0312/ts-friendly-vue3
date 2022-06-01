@@ -4,10 +4,14 @@ import fetchCount from "../services/fetchCount";
 
 interface Props {
   limit: number
-  alertMessageOnLimit: string
+  alertMessageOnLimit?: string
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  alertMessageOnLimit: 'can not go any higher'
+})
+
+// const props = defineProps<Props>()
 
 // const props = defineProps<{
 //     limit: number;
