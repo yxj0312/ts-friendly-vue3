@@ -50,6 +50,7 @@ function addCount(num: number) {
     <!-- <p><button @click="addCount(1)">Add</button></p> -->
     <ControlBar
       @add-count="addCount"
+      @reset-count="count = 0"
     ></ControlBar>
   </div>
 </template>
